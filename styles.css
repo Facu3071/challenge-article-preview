@@ -1,0 +1,172 @@
+/* ------------ FONTS---------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+/* ------------ RESET---------------- */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* ------------ VARIABLES---------------- */
+:root {
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --ff-one: "Manrope", sans-serif;
+}
+/* ------------ STYLES---------------- */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--light-grayish-blue);
+  font-size: 13px;
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  max-width: 23rem;
+  min-width: 11rem;
+  margin: 0 2rem;
+}
+.container-first {
+  height: 13rem;
+}
+.img-drawers img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  object-fit: cover;
+}
+.container-second {
+  background-color: white;
+  padding-top: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.main-text {
+  color: var(--Very-dark-grayish-blue);
+  font-family: var(--ff-one);
+  font-weight: 700;
+  padding: 0 2.5rem;
+}
+.text {
+  color: var(--desaturated-dark-blue);
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+  padding: 0 2.5rem;
+  font-family: var(--ff-one);
+  font-weight: 700;
+}
+.author {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  position: relative;
+}
+.author-info {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0 2.5rem;
+}
+.author-info img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.author-text {
+  color: var(--Very-dark-grayish-blue);
+  line-height: 1.5rem;
+  padding: 0 1.5rem;
+  font-family: var(--ff-one);
+  font-size: 0.7rem;
+}
+.date {
+  color: var(--grayish-blue);
+  font-family: var(--ff-one);
+  font-weight: 500;
+}
+.author-social-media {
+  background-color: var(--Very-dark-grayish-blue);
+  width: 100%;
+  padding: 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.author-social-media h3 {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--grayish-blue);
+  font-family: var(--ff-one);
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  padding-right: 1rem;
+}
+.social-icon {
+  background: transparent;
+  border: none;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+.btn-share {
+  border: none;
+  border-radius: 50%;
+  background-color: var(--light-grayish-blue);
+  font-size: 1.1rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  color: var(--desaturated-dark-blue);
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+}
+.btn-share.active {
+  color: white;
+  background-color: var(--desaturated-dark-blue);
+}
+.none {
+  display: none;
+}
+
+@media screen and (min-width: 650px) {
+  .section {
+    flex-direction: row;
+    max-width: 45rem;
+    height: 20rem;
+  }
+  .container-first {
+    width: 50rem;
+    height: 100%;
+  }
+  .container-second {
+    padding: 1rem 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .img-drawers img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .author-info {
+    margin-bottom: 0;
+  }
+  .author-social-media {
+    border-bottom-left-radius: 0;
+    margin-top: 2.4rem;
+  }
+}
